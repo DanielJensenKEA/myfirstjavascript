@@ -9,19 +9,21 @@ pbCol.textContent="Tryk mig for set color";
 let bdy = document.querySelector("body");
 console.log(bdy);
 
-pbCol.addEventListener('click', setBackgroundColor)
-document.addEventListener('keyup', setBackgroundColor)
+
 
 
 let inpColorValue = document.querySelector(".inpColorValue");
 const inpColorPicker = document.getElementById("inpColorPicker")
-inpColorPicker.addEventListener('input', useColorPicker)
+
 const pTags = document.getElementsByTagName('p')
 console.log(pTags)
 
 const pArray = Array.from(pTags);
 pArray.forEach(increaseFont)
 
+pbCol.addEventListener('click', setBackgroundColor)
+document.addEventListener('keyup', setBackgroundColor)
+inpColorPicker.addEventListener('input', useColorPicker)
 
 function increaseFont(element) {
     let fontSize = element.style.fontSize;
